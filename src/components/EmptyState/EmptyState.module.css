@@ -1,0 +1,7 @@
+.empty {
+  color: var(--color-text-tertiary);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  padding: var(--space-4) 0;
+  border-top: 1px dashed var(--color-border);
+}

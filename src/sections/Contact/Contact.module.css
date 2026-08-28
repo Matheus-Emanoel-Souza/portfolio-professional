@@ -1,0 +1,27 @@
+.contact {
+  padding-block: var(--space-9);
+}
+
+.heading {
+  font-size: var(--fs-2xl);
+}
+
+.intro {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-md);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-7);
+  max-width: 50ch;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+.resumeCallout {
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: center;
+}

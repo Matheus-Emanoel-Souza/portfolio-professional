@@ -1,0 +1,30 @@
+.experience {
+  padding-block: var(--space-9);
+}
+
+.heading {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-7);
+}
+
+.callout {
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.callout p {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.calloutLink {
+  font-weight: 600;
+  color: var(--color-accent);
+}

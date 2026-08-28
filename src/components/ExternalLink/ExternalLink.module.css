@@ -1,0 +1,15 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.icon {
+  font-size: 0.8em;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.link:hover .icon {
+  opacity: 1;
+}

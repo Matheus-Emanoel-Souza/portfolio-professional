@@ -1,0 +1,21 @@
+.notFound {
+  padding-block: var(--space-10);
+  text-align: center;
+}
+
+.code {
+  font-size: var(--fs-4xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.notFound h1 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-6);
+}
+
+.link {
+  font-weight: 600;
+  color: var(--color-accent);
+}
