@@ -26,7 +26,7 @@ export const careerEvents: CareerEvent[] = [
   {
     id: 'oncovit',
     branch: 'career',
-    title: 'Estagiário de TI',
+    title: 'Estagiário de Desenvolvimento',
     organization: 'Oncovit',
     sortDate: '2025-07',
     period: 'Julho de 2025 — atual',
