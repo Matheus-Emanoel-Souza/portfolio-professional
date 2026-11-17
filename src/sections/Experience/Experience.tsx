@@ -14,8 +14,9 @@ export function Experience() {
       className={['section', 'container', styles.experience].join(' ')}
       aria-labelledby="experience-heading"
     >
+      <span className="overline">TRAJETÓRIA / 03</span>
       <h2 id="experience-heading" className={styles.heading}>
-        Experiência
+        Experiência<span className="accentDot">.</span>
       </h2>
 
       <Timeline events={experienceEvents} />

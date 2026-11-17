@@ -1,27 +1,63 @@
 .contact {
-  padding-block: var(--space-9);
+  padding-block: var(--space-8);
+}
+
+.contact.contact {
+  max-width: none;
+  background: var(--color-ink-elevated);
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 6vw, 4.5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact.contact::before {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  height: 560px;
+  width: 560px;
+  right: -320px;
+  top: -220px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.overline {
+  color: var(--color-mint);
+  position: relative;
 }
 
 .heading {
   font-size: var(--fs-2xl);
+  margin: var(--space-3) 0 0;
+  position: relative;
+}
+
+.accentMint {
+  color: var(--color-mint);
 }
 
 .intro {
-  color: var(--color-text-secondary);
+  color: #b8c8cc;
   font-size: var(--fs-md);
   margin-top: var(--space-3);
   margin-bottom: var(--space-7);
   max-width: 50ch;
+  position: relative;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--space-5);
+  position: relative;
 }
 
 .resumeCallout {
   margin-top: var(--space-8);
   display: flex;
   justify-content: center;
+  position: relative;
 }

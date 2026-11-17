@@ -16,8 +16,9 @@ export function Contact() {
       className={['section', 'container', styles.contact].join(' ')}
       aria-labelledby="contact-heading"
     >
+      <span className={['overline', styles.overline].join(' ')}>CONTATO / 07</span>
       <h2 id="contact-heading" className={styles.heading}>
-        Vamos conversar?
+        Vamos conversar<span className={styles.accentMint}>?</span>
       </h2>
       <p className={styles.intro}>Tem uma oportunidade, projeto ou quer trocar uma ideia?</p>
 

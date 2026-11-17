@@ -21,21 +21,30 @@ const facts = [
 export function About() {
   return (
     <section id="about" className={['section', 'container', styles.about].join(' ')} aria-labelledby="about-heading">
+      <span className="overline">SOBRE / 01</span>
       <h2 id="about-heading" className={styles.heading}>
-        Sobre
+        Sobre<span className="accentDot">.</span>
       </h2>
 
       <div className={styles.grid}>
-        <p className={styles.bio}>{profile.bio}</p>
+        <div className={styles.poster} role="img" aria-label="Monograma ME em fundo verde suave">
+          <span className={styles.posterCorner}>IDENTIDADE / ME.</span>
+          <span className={styles.posterMark}>ME.</span>
+          <span className={[styles.posterCorner, styles.posterCornerBottom].join(' ')}>DESENVOLVIMENTO COM PROPÓSITO</span>
+        </div>
 
-        <dl className={styles.facts}>
-          {facts.map((fact) => (
-            <div key={fact.label} className={styles.fact}>
-              <dt>{fact.label}</dt>
-              <dd>{fact.value}</dd>
-            </div>
-          ))}
-        </dl>
+        <div>
+          <p className={styles.bio}>{profile.bio}</p>
+
+          <dl className={styles.facts}>
+            {facts.map((fact) => (
+              <div key={fact.label} className={styles.fact}>
+                <dt>{fact.label}</dt>
+                <dd>{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
     </section>
   )

@@ -19,11 +19,11 @@ src/
   pages/Home, ProjectCaseStudy, NotFound
   sections/                      # uma seção da Home cada (Header..Footer)
   components/                    # ProjectCard, Timeline, ContactCard,
-                                  # CopyButton, ThemeToggle, ResumeButton,
+                                  # CopyButton, ArchitectureDiagram, ResumeButton,
                                   # ExternalLink, EmptyState, Gallery, icons/
   data/                          # profile/projects/career/skills — única
                                   # fonte de conteúdo, tipada
-  types/, hooks/, lib/, styles/  # tokens (cor/tipo/espaço), useTheme, etc.
+  types/, hooks/, lib/, styles/  # tokens (cor/tipo/espaço), etc.
 ```
 
 Decisões que importam pra manutenção:
@@ -47,10 +47,12 @@ Decisões que importam pra manutenção:
   só PT-BR — nenhuma das instruções originais pediu troca de idioma como
   requisito, e todo o conteúdo real já é em português. Ver "Próximos
   passos".
-- **Tema claro/escuro via CSS custom properties** (`styles/tokens.css`) +
-  `useTheme` (`hooks/useTheme.ts`) — 3 estados: escolha explícita
-  (persistida em `localStorage`), ou segue `prefers-color-scheme` enquanto
-  não houver escolha. Sem lib externa.
+- **Sem dark mode — decisão deliberada (2026-11-16).** O site tinha
+  tema claro/escuro via CSS custom properties + `useTheme`, removido ao
+  aplicar a identidade visual nova (ver `design-reference/`), que é só
+  modo claro (`color-scheme: light` em `styles/tokens.css`). Se precisar
+  reintroduzir dark mode, reconstruir os tokens escuros do zero a partir
+  da paleta atual — não há mais `useTheme`/`ThemeToggle`/`MoonIcon`/`SunIcon`.
 - **Ícones são SVG de linha desenhados do zero** (`components/icons/`), não
   os pixel icons do Adventure e não os logos de marca exatos das empresas —
   decisão deliberada pra não copiar identidade visual de terceiros.

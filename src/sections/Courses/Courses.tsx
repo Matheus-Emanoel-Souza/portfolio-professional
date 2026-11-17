@@ -18,8 +18,9 @@ export function Courses() {
         className={['section', 'container', styles.courses].join(' ')}
         aria-labelledby="courses-heading"
       >
+        <span className="overline">TRAJETÓRIA / 05</span>
         <h2 id="courses-heading" className={styles.heading}>
-          Formação complementar
+          Formação complementar<span className="accentDot">.</span>
         </h2>
         <EmptyState>Cursos e certificações serão adicionados aqui em breve.</EmptyState>
       </section>

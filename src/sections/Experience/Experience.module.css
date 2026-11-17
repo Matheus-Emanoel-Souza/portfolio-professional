@@ -4,7 +4,7 @@
 
 .heading {
   font-size: var(--fs-2xl);
-  margin-bottom: var(--space-7);
+  margin: var(--space-3) 0 var(--space-7);
 }
 
 .callout {

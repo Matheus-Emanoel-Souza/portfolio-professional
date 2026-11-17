@@ -26,15 +26,15 @@ explícita — nada foi adicionado só por ser popular.
 src/
   main.tsx, App.tsx, routes/     # HashRouter + lazy pages por rota
   pages/Home, ProjectCaseStudy, NotFound
-  sections/                      # Header, Hero, About, FeaturedProjects,
+  sections/                      # Header, Hero, Principles, About, FeaturedProjects,
                                   # Experience, Education, Courses, Skills,
                                   # Contact, Footer — uma seção da Home cada
   components/                    # ProjectCard, Timeline, ContactCard,
-                                  # CopyButton, ThemeToggle, ResumeButton,
+                                  # CopyButton, ArchitectureDiagram, ResumeButton,
                                   # ExternalLink, EmptyState, Gallery, icons/
   data/                          # profile/projects/career/skills — única
                                   # fonte de conteúdo, tipada
-  types/, hooks/, lib/, styles/  # tokens de design (cor/tipo/espaço), tema
+  types/, hooks/, lib/, styles/  # tokens de design (cor/tipo/espaço)
 ```
 
 ## Como executar

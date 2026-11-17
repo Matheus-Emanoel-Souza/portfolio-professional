@@ -18,5 +18,9 @@ export default defineConfig({
     globals: true,
     setupFiles: './src/test/setup.ts',
     css: true,
+    // O primeiro teste do arquivo paga o cold-start do jsdom (+ fontes/CSS
+    // importados) e passa de 5s por vezes com o default — sem isso, falha
+    // por timeout mesmo sem nada de errado (confirmado rodando isolado).
+    testTimeout: 10000,
   },
 })

@@ -1,7 +1,7 @@
 import type { MouseEvent } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { ResumeButton } from '@/components/ResumeButton/ResumeButton'
-import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
+import { profile } from '@/data/profile'
 import { useScrolled } from '@/hooks/useScrolled'
 import { scrollToSection } from '@/lib/scrollToSection'
 import styles from './Header.module.css'
@@ -38,8 +38,14 @@ export function Header() {
   return (
     <header className={[styles.header, scrolled ? styles.scrolled : ''].join(' ')}>
       <div className={[styles.inner, 'container'].join(' ')}>
-        <Link to="/" className={styles.brand}>
-          Matheus Emanoel
+        <Link to="/" className={styles.brand} aria-label={`${profile.name}, início do portfólio`}>
+          <span className={styles.brandMark} aria-hidden="true">
+            M.
+          </span>
+          <span className={styles.brandName}>
+            {profile.name}
+            <small>{profile.role}</small>
+          </span>
         </Link>
 
         <nav className={styles.nav} aria-label="Navegação principal">
@@ -55,7 +61,6 @@ export function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <ThemeToggle />
           <ResumeButton variant="compact" />
         </div>
       </div>

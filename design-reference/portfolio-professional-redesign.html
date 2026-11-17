@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f5f0" />
+  <meta name="description" content="Portfólio profissional de Matheus Emanoel Souza. Desenvolvimento de software, C#/.NET, engenharia de soluções, projetos e tecnologia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://matheus-emanoel-souza.github.io/portfolio-professional/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Matheus Emanoel — Desenvolvimento de Software" />
+  <meta property="og:description" content="Engenharia de software, interfaces bem construídas e soluções que funcionam." />
+  <meta property="og:url" content="https://matheus-emanoel-souza.github.io/portfolio-professional/" />
+  <meta property="og:image" content="https://matheus-emanoel-souza.github.io/portfolio-professional/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Matheus Emanoel — Desenvolvedor de Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23132231'/%3E%3Cpath fill='%23A8DFCF' d='M12 44V20h6l14 17 14-17h6v24h-7V31L32 46 19 31v13z'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f5f0;
+      --paper-2: #eaece7;
+      --surface: #ffffff;
+      --ink: #132231;
+      --ink-soft: #334754;
+      --muted: #687880;
+      --line: #dce2df;
+      --accent: #107e72;
+      --accent-dark: #0d6259;
+      --accent-light: #d8efe7;
+      --mint: #a8dfcf;
+      --mono: 'IBM Plex Mono', 'Courier New', monospace;
+      --display: 'Space Grotesk', 'Arial', sans-serif;
+      --body: 'DM Sans', 'Arial', sans-serif;
+      --radius: 16px;
+      --width: 1180px;
+      --shadow: 0 18px 50px rgba(14, 33, 43, .075);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 98px; }
+    body { margin: 0; min-width: 320px; font-family: var(--body); color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body::selection { background: var(--mint); color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .skip-link { position: absolute; z-index: 200; top: -80px; left: 12px; padding: 12px 16px; background: var(--ink); color: white; border-radius: 8px; }
+    .skip-link:focus { top: 12px; }
+    .container { width: min(var(--width), calc(100% - 80px)); margin-inline: auto; }
+    .overline { display: inline-flex; align-items: center; gap: 10px; font: 500 11px/1.4 var(--mono); letter-spacing: .115em; text-transform: uppercase; color: var(--accent); }
+    .overline::before { content: ''; width: 18px; height: 1px; background: currentColor; }
+    .section-title { font: 600 clamp(35px, 4.1vw, 59px)/1.08 var(--display); letter-spacing: -.055em; margin: 17px 0 0; }
+    .section-subtitle { max-width: 470px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 40px; }
+    .section-head .section-subtitle { margin: 0 0 4px; }
+    .section { padding-block: 106px; }
+    .arrow-icon { display: inline-block; width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 15px; min-height: 52px; padding: 0 22px; border-radius: 7px; border: 1px solid transparent; font-size: 13px; font-weight: 700; transition: background .25s ease, color .25s ease, transform .25s ease, border .25s ease; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-dark { background: var(--ink); color: white; }
+    .btn-dark:hover { background: var(--accent-dark); }
+    .btn-outline { background: transparent; border-color: #9ca9a8; color: var(--ink); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-light { background: var(--mint); color: var(--ink); }
+    .btn-light:hover { background: white; }
+    .btn-outline-light { border-color: #63727b; color: white; background: transparent; }
+    .btn-outline-light:hover { border-color: var(--mint); color: var(--mint); }
+    /* Navigation */
+    .site-header { height: 84px; position: sticky; top: 0; z-index: 50; background: rgba(245, 245, 240, .94); border-bottom: 1px solid rgba(19,34,49,.1); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 32px; }
+    .brand { display: inline-flex; gap: 12px; align-items: center; min-width: max-content; }
+    .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; color: var(--mint); background: var(--ink); font: 700 19px/1 var(--display); letter-spacing: -.09em; }
+    .brand-name { display: flex; flex-direction: column; font: 700 13px/1.22 var(--display); letter-spacing: -.025em; }
+    .brand-name small { font: 400 10px/1.7 var(--mono); letter-spacing: .015em; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 31px; }
+    .nav-links > a { font-size: 12.5px; font-weight: 650; color: var(--ink-soft); transition: color .2s ease; }
+    .nav-links > a:hover, .nav-links > a.active { color: var(--accent); }
+    .nav-cta { min-height: 38px; padding: 0 17px; font-size: 12px; }
+    .menu-toggle { display: none; width: 42px; height: 42px; justify-content: center; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: transparent; cursor: pointer; color: var(--ink); }
+    .menu-toggle svg { width: 22px; height: 22px; }
+    /* Hero */
+    .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+    .hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .33; background-image: radial-gradient(#cad1cb .7px, transparent .7px); background-size: 23px 23px; mask-image: linear-gradient(90deg, transparent 25%, #000 100%); }
+    .hero-layout { min-height: 665px; padding-block: 75px 78px; display: grid; grid-template-columns: 1.02fr .98fr; gap: min(6vw, 78px); align-items: center; position: relative; }
+    .availability { display: inline-flex; align-items: center; gap: 10px; font: 500 10.5px/1.5 var(--mono); letter-spacing: .015em; color: var(--accent-dark); background: #e2f0e7; border: 1px solid #c8e1d2; border-radius: 50px; padding: 7px 12px; }
+    .availability .pulse { position: relative; height: 7px; width: 7px; background: var(--accent); border-radius: 50%; }
+    .availability .pulse::after { content: ''; position: absolute; inset: -4px; border: 1px solid var(--accent); border-radius: 50%; animation: pulse 2.8s infinite; }
+    @keyframes pulse { 0% { transform: scale(.55); opacity: .8; } 100% { transform: scale(1.35); opacity: 0; } }
+    .hero h1 { max-width: 740px; margin: 27px 0 21px; font: 600 clamp(51px, 5.8vw, 83px)/1.035 var(--display); letter-spacing: -.074em; }
+    .hero h1 .accent-text { color: var(--accent); position: relative; }
+    .hero-description { max-width: 475px; color: var(--ink-soft); font-size: 16.5px; line-height: 1.85; margin: 0 0 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { margin-top: 56px; display: flex; align-items: center; gap: 14px; color: var(--muted); font: 500 10px var(--mono); letter-spacing: .03em; }
+    .hero-note span:first-child { height: 1px; width: 37px; background: #9ba7a4; }
+    .hero-note strong { color: var(--ink); font-weight: 600; }
+    .architecture-card { width: 100%; min-width: 0; aspect-ratio: .98; max-height: 545px; background: #112330; border-radius: 15px; position: relative; overflow: hidden; color: white; box-shadow: 0 30px 65px rgba(18, 37, 47, .18); }
+    .architecture-card::before { content: ''; position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(#6f9a9e 1px, transparent 1px), linear-gradient(90deg, #6f9a9e 1px, transparent 1px); background-size: 30px 30px; mask-image: linear-gradient(180deg, #000 0%, transparent 98%); }
+    .architecture-top { position: absolute; top: 27px; left: 29px; right: 29px; display: flex; align-items: center; justify-content: space-between; gap: 10px; z-index: 2; }
+    .architecture-top .eyebrow, .architecture-footer .eyebrow { color: #a2b6bd; font: 500 10px var(--mono); letter-spacing: .06em; }
+    .window-dots { display: inline-flex; gap: 6px; }
+    .window-dots i { display: block; width: 7px; height: 7px; background: #52707a; border-radius: 50%; }
+    .window-dots i:first-child { background: #a8dfcf; }
+    .architecture-core { position: absolute; left: 50%; top: 47%; transform: translate(-50%,-50%); width: 89%; max-width: 425px; aspect-ratio: 1; }
+    .orbit { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border: 1px solid rgba(150,197,201,.22); border-radius: 50%; }
+    .orbit:nth-child(1) { width: 96%; height: 96%; }
+    .orbit:nth-child(2) { width: 72%; height: 72%; border-style: dashed; animation: orbit-spin 65s linear infinite; }
+    .orbit:nth-child(3) { width: 45%; height: 45%; }
+    @keyframes orbit-spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+    .core-square { position: absolute; width: 142px; height: 142px; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(45deg); border: 1px solid #62afa8; background: linear-gradient(145deg, #1e4a53, #17333e); box-shadow: 0 0 0 10px rgba(125,194,188,.045), 0 0 48px rgba(55,184,170,.14); }
+    .core-content { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .core-content strong { font: 600 31px/1 var(--display); letter-spacing: -.08em; color: var(--mint); }
+    .core-content small { display: block; margin-top: 11px; color: #c4d8da; font: 500 9px var(--mono); letter-spacing: .095em; }
+    .node { position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; width: 101px; min-height: 51px; border: 1px solid #3d6570; background: rgba(20,43,55,.94); border-radius: 6px; font: 500 10px/1.4 var(--mono); letter-spacing: .03em; color: #e8f3f3; z-index: 1; box-shadow: 0 8px 30px #081a2699; }
+    .node small { font-size: 8px; color: #9dabb4; letter-spacing: .035em; }
+    .node-one { top: 1%; left: 50%; transform: translateX(-50%); }
+    .node-two { top: 51%; left: -2%; transform: translateY(-50%); }
+    .node-three { top: 51%; right: -2%; transform: translateY(-50%); }
+    .node-four { bottom: 1%; left: 50%; transform: translateX(-50%); }
+    .pathways { width: 100%; height: 100%; position: absolute; inset: 0; overflow: visible; }
+    .pathways path { fill: none; stroke: #78a7a6; stroke-width: 1; stroke-dasharray: 4 6; opacity: .74; }
+    .pathways circle { fill: var(--mint); }
+    .architecture-footer { position: absolute; left: 29px; right: 29px; bottom: 24px; z-index: 1; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #32505c; padding-top: 19px; }
+    .architecture-footer .metric { font: 500 10px var(--mono); color: var(--mint); }
+    .architecture-footer .metric::before { content: '●'; padding-right: 7px; font-size: 8px; }
+    /* Principles strip */
+    .principles { background: #fff; border-bottom: 1px solid var(--line); }
+    .principles-grid { display: grid; grid-template-columns: repeat(3,1fr); min-height: 119px; align-items: center; }
+    .principle { display: flex; align-items: center; gap: 17px; padding: 20px 32px; border-right: 1px solid var(--line); }
+    .principle:first-child { padding-left: 0; }
+    .principle:last-child { border: none; padding-right: 0; }
+    .principle-index { flex: none; color: var(--accent); font: 500 12px var(--mono); }
+    .principle-title { font: 600 14px var(--display); }
+    .principle-text { color: var(--muted); font-size: 11.5px; line-height: 1.4; margin-top: 2px; }
+    /* Work */
+    .projects-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
+    .project-card { min-width: 0; border: 1px solid #d9e0dc; background: white; border-radius: 14px; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .project-art { height: 289px; position: relative; overflow: hidden; }
+    .radar-art { background: radial-gradient(circle at 50% 82%, #214a53 0%, #102a37 55%, #0d212e 100%); }
+    .radar-art::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(#9bc7ba19 1px,transparent 1px), linear-gradient(90deg,#9bc7ba19 1px,transparent 1px); background-size: 24px 24px; }
+    .radar-ring { position: absolute; width: 440px; height: 440px; border: 1px solid rgba(132,206,190,.29); border-radius: 50%; bottom: -270px; left: 50%; transform: translateX(-50%); box-shadow: 0 0 0 59px rgba(122,196,179,.035), 0 0 0 121px rgba(122,196,179,.04); }
+    .radar-ring::before, .radar-ring::after { content: ''; position: absolute; inset: 20%; border-radius: 50%; border: 1px solid rgba(131,207,182,.25); }
+    .radar-ring::after { inset: 40%; }
+    .radar-sweep { position: absolute; width: 345px; height: 345px; border-radius: 50%; bottom: -218px; left: 50%; transform: translateX(-50%); background: conic-gradient(from 0deg, transparent 0deg, transparent 265deg, rgba(124,225,188,.3) 359deg, transparent 360deg); animation: radar-rotate 9s linear infinite; transform-origin: 50% 50%; }
+    @keyframes radar-rotate { to { transform: translateX(-50%) rotate(360deg); } }
+    .radar-point { position: absolute; height: 8px; width: 8px; border-radius: 50%; background: #a5e7c7; box-shadow: 0 0 0 5px #a5e7c725, 0 0 25px #a5e7c7; }
+    .radar-point.one { left: 34%; top: 40%; }
+    .radar-point.two { right: 24%; top: 57%; }
+    .radar-point.three { left: 57%; top: 26%; width: 5px; height: 5px; }
+    .art-top { position: absolute; top: 24px; left: 27px; right: 27px; display: flex; align-items: center; justify-content: space-between; color: #b6d6d4; font: 500 10px var(--mono); z-index: 1; }
+    .art-tag { border: 1px solid #709592; background: #13333b; border-radius: 30px; padding: 5px 9px; color: #cceddf; }
+    .art-bottom { position: absolute; bottom: 21px; left: 26px; color: #b6d6d4; font: 500 10px var(--mono); z-index: 1; }
+    .job-art { background: #dcece6; }
+    .job-art::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(#84ae9e88 .7px,transparent .7px); background-size: 18px 18px; opacity: .34; }
+    .job-interface { position: absolute; background: white; top: 44px; left: 10%; right: 10%; height: 246px; border: 1px solid #aebeb8; border-radius: 10px 10px 0 0; box-shadow: 0 21px 45px #1e4d4130; overflow: hidden; }
+    .job-ui-head { height: 42px; background: #f3f6f3; border-bottom: 1px solid #e3e9e5; display: flex; align-items: center; padding: 0 18px; justify-content: space-between; }
+    .job-ui-head b { font: 700 13px var(--display); color: var(--ink); }
+    .job-ui-head i { display: block; height: 17px; width: 55px; border-radius: 30px; background: #c9e7d9; }
+    .job-ui-body { display: grid; grid-template-columns: 31% 1fr; height: calc(100% - 42px); }
+    .job-sidebar { background: #fbfcfa; border-right: 1px solid #eef1ec; padding: 19px 13px; }
+    .job-sidebar span { display: block; height: 7px; background: #dce2df; border-radius: 4px; width: 75%; margin-bottom: 17px; }
+    .job-sidebar span:first-child { background: #8bd3b1; width: 90%; }
+    .job-main { padding: 16px 16px 0; }
+    .job-title { width: 69%; height: 10px; border-radius: 3px; background: #283f47; margin-bottom: 10px; }
+    .job-desc { width: 92%; height: 6px; border-radius: 3px; background: #d5ded9; margin-bottom: 22px; }
+    .job-row { display: flex; align-items: center; gap: 11px; padding: 12px 0; border-top: 1px solid #edf0ec; }
+    .job-step { width: 23px; height: 23px; border-radius: 7px; flex: none; background: #e5f5ea; color: var(--accent); display: grid; place-items: center; font: 700 11px var(--mono); }
+    .job-row:nth-child(2) .job-step { background: #eef0f2; color: var(--muted); }
+    .job-lines { flex: 1; }
+    .job-lines b { display: block; height: 6px; width: 70%; background: #6b837c; border-radius: 4px; margin-bottom: 5px; }
+    .job-lines small { display: block; height: 5px; width: 38%; background: #d1dcd6; border-radius: 4px; }
+    .job-status { width: 42px; height: 15px; border-radius: 10px; background: #d8efe3; }
+    .job-row:nth-child(2) .job-status { background: #f0e9d7; }
+    .project-content { padding: 26px 29px 29px; }
+    .project-index { display: flex; align-items: center; justify-content: space-between; font: 500 10px var(--mono); color: var(--muted); letter-spacing: .04em; }
+    .project-index .status { display: inline-flex; align-items: center; gap: 7px; }
+    .project-index .status::before { content: ''; height: 6px; width: 6px; border-radius: 50%; background: var(--accent); }
+    .project-content h3 { font: 600 26px/1.2 var(--display); letter-spacing: -.04em; margin: 18px 0 9px; }
+    .project-content p { color: var(--muted); font-size: 13.5px; line-height: 1.8; margin: 0 0 20px; min-height: 76px; }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tech-tag { border: 1px solid #dbe3df; border-radius: 5px; background: #f7f9f6; font: 500 10.5px/1.5 var(--mono); padding: 5px 9px; color: var(--ink-soft); }
+    .project-footer { margin-top: 26px; padding-top: 17px; border-top: 1px solid #e7ece8; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .project-footer > span { color: var(--muted); font: 500 11px var(--mono); }
+    .project-footer a { font-size: 12px; font-weight: 700; color: var(--accent-dark); display: inline-flex; align-items: center; gap: 8px; }
+    .project-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    /* Expertise */
+    .expertise { background: white; border-block: 1px solid var(--line); }
+    .expertise-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 10%; }
+    .expertise-intro .section-title { margin-bottom: 24px; }
+    .expertise-intro p { max-width: 370px; font-size: 15px; color: var(--muted); line-height: 1.85; }
+    .expertise-kicker { display: block; margin-top: 36px; color: var(--accent); font: 500 10px var(--mono); letter-spacing: .06em; }
+    .skills-list { border-top: 1px solid var(--line); }
+    .skill-row { display: grid; grid-template-columns: 42px 1fr auto; align-items: start; column-gap: 17px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+    .skill-row .num { color: var(--accent); font: 500 11px var(--mono); padding-top: 5px; }
+    .skill-row h3 { font: 600 20px var(--display); margin: 0 0 7px; letter-spacing: -.035em; }
+    .skill-row p { color: var(--muted); font-size: 13px; line-height: 1.7; margin: 0; }
+    .skill-row .symbol { color: var(--accent); font: 500 22px var(--display); padding-top: 1px; }
+    /* About */
+    .about-grid { display: grid; grid-template-columns: .83fr 1.17fr; align-items: center; gap: 12%; }
+    .about-poster { position: relative; min-height: 450px; border-radius: 13px; background: #dbe9e2; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+    .about-poster::before { content: ''; position: absolute; top: -150px; right: -140px; width: 380px; height: 380px; border: 1px solid #a9beb3; border-radius: 50%; box-shadow: 0 0 0 60px #cadfd348, 0 0 0 120px #cadfd328; }
+    .about-poster::after { content: ''; position: absolute; bottom: -105px; left: -130px; width: 360px; height: 360px; border: 1px solid #a9beb3; border-radius: 50%; box-shadow: 0 0 0 60px #cadfd348; }
+    .poster-mark { position: relative; font: 700 clamp(100px, 15vw, 186px)/1 var(--display); letter-spacing: -.13em; color: #173c3b; z-index: 1; padding-right: .14em; }
+    .poster-corner { position: absolute; top: 24px; left: 25px; font: 500 10px var(--mono); color: #44645d; letter-spacing: .09em; }
+    .poster-corner-bottom { top: auto; left: auto; right: 25px; bottom: 24px; }
+    .about-copy .section-title { margin-bottom: 24px; }
+    .about-copy p { color: var(--ink-soft); font-size: 15px; line-height: 1.9; margin: 0 0 20px; }
+    .about-copy p strong { color: var(--ink); }
+    .about-divider { border-top: 1px solid var(--line); margin: 30px 0; }
+    .about-facts { display: grid; grid-template-columns: repeat(2,1fr); gap: 25px; }
+    .about-facts small { display: block; color: var(--muted); font: 500 10px var(--mono); letter-spacing: .05em; margin-bottom: 9px; text-transform: uppercase; }
+    .about-facts strong { font: 600 14px/1.5 var(--display); }
+    /* Contact */
+    .contact-section { padding: 0 0 32px; }
+    .contact-panel { background: #132432; color: white; border-radius: 15px; padding: clamp(36px, 6.5vw, 82px); position: relative; overflow: hidden; }
+    .contact-panel::before { content: ''; position: absolute; border: 1px solid #ffffff25; height: 630px; width: 630px; right: -360px; top: -240px; border-radius: 50%; box-shadow: 0 0 0 70px #ffffff08, 0 0 0 140px #ffffff05; pointer-events: none; }
+    .contact-panel .overline { color: var(--mint); }
+    .contact-panel h2 { max-width: 830px; font: 600 clamp(38px, 5.3vw, 72px)/1.09 var(--display); letter-spacing: -.065em; margin: 24px 0 21px; position: relative; }
+    .contact-panel h2 em { color: var(--mint); font-style: normal; }
+    .contact-panel p { color: #b8c8cc; max-width: 610px; font-size: 15px; line-height: 1.8; margin: 0 0 29px; position: relative; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; position: relative; }
+    .footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 34px 0 24px; color: var(--muted); font-size: 11.5px; }
+    .footer strong { color: var(--ink); font-weight: 700; }
+    .footer-right { display: flex; gap: 25px; }
+    .footer-right a { transition: color .2s ease; }
+    .footer-right a:hover { color: var(--accent); }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 24px); padding: 11px 17px; background: var(--ink); color: white; border-radius: 8px; box-shadow: var(--shadow); font-size: 12px; z-index: 99; opacity: 0; visibility: hidden; transition: opacity .25s, transform .25s, visibility .25s; text-align: center; }
+    .toast.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+    .reveal-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(20px); }
+    .reveal { transition: opacity .65s ease, transform .65s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    @media (max-width: 1050px) {
+      .hero-layout { gap: 36px; }
+      .hero h1 { font-size: clamp(48px, 5.9vw, 70px); }
+      .architecture-card { aspect-ratio: .85; }
+      .about-grid { gap: 7%; }
+      .expertise-grid { gap: 7%; }
+    }
+    @media (max-width: 800px) {
+      .container { width: min(var(--width), calc(100% - 42px)); }
+      .site-header { height: 72px; }
+      .menu-toggle { display: flex; }
+      .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 18px 21px 23px; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 20px 25px #15263218; flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links.open { display: flex; }
+      .nav-links > a:not(.nav-cta) { padding: 12px 0; font-size: 14px; }
+      .nav-cta { margin-top: 8px; align-self: flex-start; }
+      .hero-layout { grid-template-columns: 1fr; padding-block: 60px 64px; gap: 43px; }
+      .hero h1 { max-width: 740px; font-size: clamp(51px, 8vw, 74px); }
+      .hero-note { margin-top: 34px; }
+      .architecture-card { aspect-ratio: 1.5; max-height: 420px; }
+      .architecture-core { height: 350px; width: 350px; top: 48%; }
+      .section { padding-block: 76px; }
+      .section-head { display: block; }
+      .section-head .section-subtitle { margin-top: 17px; }
+      .principles-grid { min-height: 105px; }
+      .principle { gap: 10px; padding-inline: 14px; }
+      .principle-title { font-size: 12px; }
+      .principle-text { font-size: 10px; }
+      .expertise-grid { grid-template-columns: 1fr; gap: 32px; }
+      .expertise-intro p { max-width: 650px; }
+      .expertise-kicker { margin-top: 12px; }
+      .about-grid { grid-template-columns: 1fr; gap: 45px; }
+      .about-poster { min-height: 320px; }
+      .poster-mark { font-size: 160px; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(var(--width), calc(100% - 36px)); }
+      .hero-layout { padding-block: 47px 53px; gap: 37px; }
+      .hero h1 { font-size: clamp(46px, 10vw, 60px); letter-spacing: -.069em; margin-top: 22px; }
+      .hero-description { font-size: 15px; }
+      .hero-actions { align-items: stretch; }
+      .hero-actions .btn { flex-grow: 1; }
+      .architecture-card { aspect-ratio: 1.09; min-height: 310px; }
+      .architecture-top { top: 18px; left: 18px; right: 18px; }
+      .architecture-core { width: min(78%, 325px); height: auto; aspect-ratio: 1; }
+      .core-square { width: 115px; height: 115px; }
+      .core-content strong { font-size: 26px; }
+      .core-content small { font-size: 8px; }
+      .node { width: 83px; min-height: 43px; font-size: 9px; }
+      .node small { font-size: 7px; }
+      .architecture-footer { left: 19px; right: 19px; bottom: 17px; padding-top: 13px; }
+      .architecture-footer .eyebrow, .architecture-footer .metric { font-size: 8px; }
+      .principles-grid { grid-template-columns: 1fr; padding-block: 11px; }
+      .principle { border: none; border-bottom: 1px solid var(--line); padding: 12px 0; }
+      .principle:last-child { border-bottom: none; }
+      .principle-title { font-size: 13px; }
+      .principle-text { font-size: 11px; }
+      .section { padding-block: 66px; }
+      .section-title { font-size: clamp(36px, 9vw, 47px); }
+      .section-head { margin-bottom: 30px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-art { height: 258px; }
+      .project-content { padding: 23px; }
+      .project-content p { min-height: auto; }
+      .skill-row { grid-template-columns: 27px 1fr auto; gap: 10px; }
+      .skill-row h3 { font-size: 19px; }
+      .about-poster { min-height: 280px; }
+      .poster-mark { font-size: 139px; }
+      .about-facts { gap: 15px; }
+      .contact-panel { border-radius: 12px; padding: 45px 27px; }
+      .contact-panel h2 { font-size: clamp(38px, 9vw, 53px); }
+      .contact-actions .btn { flex-grow: 1; }
+      .contact-section { padding-bottom: 0; }
+      .footer { flex-direction: column; align-items: flex-start; gap: 11px; padding-bottom: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Matheus Emanoel Souza","url":"https://matheus-emanoel-souza.github.io/portfolio-professional/","jobTitle":"Desenvolvedor de Software","sameAs":["https://github.com/matheus-emanoel-souza"]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Matheus Emanoel, início do portfólio">
+        <span class="brand-mark" aria-hidden="true">M.</span>
+        <span class="brand-name">Matheus Emanoel <small>DESENVOLVEDOR DE SOFTWARE</small></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#inicio">Início</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#sobre">Sobre</a>
+        <a class="btn btn-dark nav-cta" href="#contato">Entrar em contato <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-layout container">
+        <div class="hero-copy">
+          <div class="availability"><span class="pulse" aria-hidden="true"></span> SOFTWARE · ENGENHARIA · SOLUÇÕES</div>
+          <h1 id="hero-title">Tecnologia com <span class="accent-text">propósito.</span><br />Código com precisão.</h1>
+          <p class="hero-description">Sou <strong>Matheus Emanoel</strong>, desenvolvedor de software. Transformo desafios complexos em aplicações estruturadas, interfaces intuitivas e soluções pensadas para o mundo real.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#projetos">Conheça meus projetos <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+            <a class="btn btn-outline" href="https://github.com/matheus-emanoel-souza" target="_blank" rel="noopener noreferrer">Meu GitHub <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+          </div>
+          <div class="hero-note"><span aria-hidden="true"></span> <strong>C# · .NET · SQL</strong> / DESENVOLVIMENTO DE SOFTWARE</div>
+        </div>
+        <div class="architecture-card" role="img" aria-label="Ilustração da arquitetura de software: interface, regras de negócio, dados e inteligência conectados a um núcleo central">
+          <div class="architecture-top"><span class="eyebrow">ME. / ENGINEERING SYSTEM</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <div class="architecture-core">
+            <div class="orbit"></div><div class="orbit"></div><div class="orbit"></div>
+            <svg class="pathways" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="M200 200V36M200 200H36M200 200H364M200 200V364" /><circle cx="200" cy="115" r="3" /><circle cx="115" cy="200" r="3" /><circle cx="285" cy="200" r="3" /><circle cx="200" cy="285" r="3" /></svg>
+            <div class="core-square"></div>
+            <div class="core-content"><strong>&lt;M/&gt;</strong><small>SOFTWARE DESIGN</small></div>
+            <div class="node node-one">INTERFACE<small>EXPERIÊNCIA</small></div>
+            <div class="node node-two">BACKEND<small>ARQUITETURA</small></div>
+            <div class="node node-three">DADOS<small>INTEGRIDADE</small></div>
+            <div class="node node-four">INTELIGÊNCIA<small>INOVAÇÃO</small></div>
+          </div>
+          <div class="architecture-footer"><span class="eyebrow">DO CONCEITO À IMPLEMENTAÇÃO</span><span class="metric">SYSTEM READY</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="principles" aria-label="Princípios de desenvolvimento">
+      <div class="principles-grid container">
+        <div class="principle"><span class="principle-index">01 /</span><div><div class="principle-title">Arquitetura consistente</div><div class="principle-text">Estruturas que fazem sentido</div></div></div>
+        <div class="principle"><span class="principle-index">02 /</span><div><div class="principle-title">Experiência intuitiva</div><div class="principle-text">Simplicidade no uso diário</div></div></div>
+        <div class="principle"><span class="principle-index">03 /</span><div><div class="principle-title">Evolução contínua</div><div class="principle-text">Melhoria orientada por resultados</div></div></div>
+      </div>
+    </div>
+    <section class="section projects-section" id="projetos" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="overline">PORTFÓLIO / 01</span><h2 class="section-title" id="projects-title">Projetos em destaque<span style="color:var(--accent)">.</span></h2></div>
+          <p class="section-subtitle">Projetos que exploram engenharia de software, dados e soluções para problemas reais — da concepção à evolução contínua.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-art radar-art" aria-hidden="true"><div class="art-top"><span>PROJECT / 001</span><span class="art-tag">SISTEMAS INTELIGENTES</span></div><div class="radar-ring"></div><div class="radar-sweep"></div><div class="radar-point one"></div><div class="radar-point two"></div><div class="radar-point three"></div><div class="art-bottom">DETECÇÃO · SIMULAÇÃO · CONTROLE</div></div>
+            <div class="project-content"><div class="project-index"><span>01 / PROJETO ACADÊMICO</span><span class="status">Pesquisa e desenvolvimento</span></div><h3>RadarTorres</h3><p>Sistema de simulação e controle inteligente que combina heurísticas e neuroevolução para coordenar a seleção de torres no acompanhamento de alvos.</p><div class="tech-tags"><span class="tech-tag">C# / .NET</span><span class="tech-tag">WPF</span><span class="tech-tag">SharpNEAT</span><span class="tech-tag">SQLite</span></div><div class="project-footer"><span>ENGENHARIA + IA</span><a href="#contato" aria-label="Conversar sobre o projeto RadarTorres">Saiba mais <span aria-hidden="true">↗</span></a></div></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art job-art" aria-hidden="true"><div class="art-top" style="color:#3c6559"><span>PROJECT / 002</span><span class="art-tag" style="background:#eaf8ef;color:#285c4b;border-color:#b8d7c8">GESTÃO & PRODUTIVIDADE</span></div><div class="job-interface"><div class="job-ui-head"><b>JobTrail<span style="color:var(--accent)">.</span></b><i></i></div><div class="job-ui-body"><div class="job-sidebar"><span></span><span></span><span></span><span></span></div><div class="job-main"><div class="job-title"></div><div class="job-desc"></div><div class="job-row"><span class="job-step">✓</span><div class="job-lines"><b></b><small></small></div><span class="job-status"></span></div><div class="job-row"><span class="job-step">02</span><div class="job-lines"><b></b><small></small></div><span class="job-status"></span></div></div></div></div></div>
+            <div class="project-content"><div class="project-index"><span>02 / APLICAÇÃO WEB</span><span class="status">Em desenvolvimento</span></div><h3>JobTrail</h3><p>Plataforma para organizar candidaturas profissionais, acompanhar processos seletivos e registrar o histórico de entrevistas, testes e etapas.</p><div class="tech-tags"><span class="tech-tag">C# / .NET</span><span class="tech-tag">Blazor</span><span class="tech-tag">MudBlazor</span><span class="tech-tag">SQL Server</span></div><div class="project-footer"><span>FULL STACK + DADOS</span><a href="#contato" aria-label="Conversar sobre o projeto JobTrail">Saiba mais <span aria-hidden="true">↗</span></a></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section expertise" id="especialidades" aria-labelledby="expertise-title">
+      <div class="expertise-grid container">
+        <div class="expertise-intro reveal"><span class="overline">COMPETÊNCIAS / 02</span><h2 class="section-title" id="expertise-title">Da lógica à<br />experiência<span style="color:var(--accent)">.</span></h2><p>Uma abordagem de desenvolvimento que conecta regras de negócio, persistência de dados, interfaces e tecnologias inteligentes.</p><span class="expertise-kicker">ÁREAS DE CONHECIMENTO ↗</span></div>
+        <div class="skills-list reveal">
+          <div class="skill-row"><span class="num">01</span><div><h3>Backend & arquitetura</h3><p>C#, .NET, ASP.NET Core, Java e organização de regras de negócio.</p></div><span class="symbol" aria-hidden="true">↗</span></div>
+          <div class="skill-row"><span class="num">02</span><div><h3>Banco de dados</h3><p>SQL Server, SQLite, consultas SQL, modelagem e integridade dos dados.</p></div><span class="symbol" aria-hidden="true">↗</span></div>
+          <div class="skill-row"><span class="num">03</span><div><h3>Interfaces & aplicações</h3><p>Blazor, MudBlazor, WPF e XAML com foco em clareza e usabilidade.</p></div><span class="symbol" aria-hidden="true">↗</span></div>
+          <div class="skill-row"><span class="num">04</span><div><h3>Inteligência aplicada</h3><p>Simulação, neuroevolução, SharpNEAT e integração com ONNX Runtime.</p></div><span class="symbol" aria-hidden="true">↗</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section about-section" id="sobre" aria-labelledby="about-title">
+      <div class="about-grid container">
+        <div class="about-poster reveal" role="img" aria-label="Monograma ME em fundo verde suave"><span class="poster-corner">IDENTIDADE / ME.</span><span class="poster-mark">ME.</span><span class="poster-corner poster-corner-bottom">DESENVOLVIMENTO COM PROPÓSITO</span></div>
+        <div class="about-copy reveal"><span class="overline">SOBRE MIM / 03</span><h2 class="section-title" id="about-title">Curiosidade técnica.<br />Visão prática<span style="color:var(--accent)">.</span></h2><p>Sou <strong>Matheus Emanoel Souza</strong>, desenvolvedor de software e estudante de Engenharia. Tenho interesse em construir sistemas nos quais decisões de arquitetura, desempenho e experiência do usuário trabalhem juntas.</p><p>Gosto de ir além de fazer algo funcionar: busco entender o problema, estruturar soluções e evoluir cada implementação com critério técnico.</p><div class="about-divider"></div><div class="about-facts"><div><small>FOCO PRINCIPAL</small><strong>Desenvolvimento de software</strong></div><div><small>INTERESSES</small><strong>Arquitetura, dados e IA aplicada</strong></div></div></div>
+      </div>
+    </section>
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="container"><div class="contact-panel reveal"><span class="overline">CONTATO / 04</span><h2 id="contact-title">Vamos construir algo <em>relevante?</em></h2><p>Projetos interessantes começam com boas conversas. Conheça meu trabalho, acompanhe meus repositórios ou entre em contato pelo GitHub.</p><div class="contact-actions"><a class="btn btn-light" href="https://github.com/matheus-emanoel-souza" target="_blank" rel="noopener noreferrer">Visitar meu GitHub <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a><button class="btn btn-outline-light" type="button" id="copy-link">Copiar link do portfólio <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></button></div></div></div>
+    </section>
+  </main>
+  <footer class="footer container"><div>© <span id="year">2026</span> <strong>Matheus Emanoel Souza</strong>. Desenvolvido com cuidado.</div><div class="footer-right"><a href="#inicio">Voltar ao topo ↑</a><a href="https://github.com/matheus-emanoel-souza" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    (() => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+      const closeMenu = () => { menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Abrir menu'); navLinks.classList.remove('open'); };
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+        navLinks.classList.toggle('open', !isOpen);
+      });
+      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+      document.addEventListener('click', event => { if (!event.target.closest('.nav') && navLinks.classList.contains('open')) closeMenu(); });
+      window.addEventListener('resize', () => { if (window.innerWidth > 800) closeMenu(); });
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const toast = document.getElementById('toast');
+      let toastTimer;
+      const showToast = message => { toast.textContent = message; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2800); };
+      document.getElementById('copy-link').addEventListener('click', async () => {
+        const url = 'https://matheus-emanoel-souza.github.io/portfolio-professional/';
+        try {
+          if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(url);
+          else {
+            const field = document.createElement('textarea'); field.value = url; field.style.position = 'fixed'; field.style.opacity = '0'; document.body.appendChild(field); field.select();
+            const copied = document.execCommand('copy'); field.remove();
+            if (!copied) throw new Error('clipboard unavailable');
+          }
+          showToast('Link do portfólio copiado!');
+        } catch (_) { showToast('Não foi possível copiar. Acesse o link pelo navegador.'); }
+      });
+      const targets = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('reveal-ready');
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }), { threshold: .07, rootMargin: '0px 0px -20px 0px' });
+        targets.forEach(el => observer.observe(el));
+      }
+      const navAnchors = [...document.querySelectorAll('.nav-links a[href^="#"]')].filter(a => a.hash && a.hash !== '#');
+      const sections = [...document.querySelectorAll('main section[id]')];
+      if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          navAnchors.forEach(a => { const active = a.hash === '#' + entry.target.id; a.classList.toggle('active', active); if (active) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
+        }), { rootMargin: '-20% 0px -65% 0px' });
+        sections.forEach(section => sectionObserver.observe(section));
+      }
+    })();
+  </script>
+</body>
+</html>

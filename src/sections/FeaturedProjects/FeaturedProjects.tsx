@@ -14,11 +14,20 @@ export function FeaturedProjects() {
       className={['section', 'container', styles.projects].join(' ')}
       aria-labelledby="projects-heading"
     >
-      <h2 id="projects-heading" className={styles.heading}>
-        Projetos
-      </h2>
+      <div className={styles.head}>
+        <div>
+          <span className="overline">PORTFÓLIO / 02</span>
+          <h2 id="projects-heading" className={styles.heading}>
+            Projetos em destaque<span className="accentDot">.</span>
+          </h2>
+        </div>
+        <p className={styles.subtitle}>
+          Projetos que exploram engenharia de software, dados e soluções para problemas reais — da concepção à
+          evolução contínua.
+        </p>
+      </div>
 
-      <div className={styles.list}>
+      <div className={styles.grid}>
         {featuredProjects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

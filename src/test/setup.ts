@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom/vitest'
 import { vi } from 'vitest'
 
-// jsdom não implementa matchMedia nem clipboard — mocks mínimos pros hooks
-// (useTheme, scrollToSection) e pro CopyButton funcionarem em teste.
+// jsdom não implementa matchMedia nem clipboard — mocks mínimos pro
+// scrollToSection (prefers-reduced-motion) e pro CopyButton funcionarem em teste.
 
 if (!window.matchMedia) {
   window.matchMedia = vi.fn().mockImplementation((query: string) => ({

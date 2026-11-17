@@ -19,12 +19,19 @@
 }
 
 .name {
+  font-family: var(--font-family-display);
   font-weight: 700;
 }
 
 .role {
-  color: var(--color-text-secondary);
-  font-size: var(--fs-sm);
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text-tertiary);
+}
+
+.bottom {
+  font-family: var(--font-family-mono);
 }
 
 .social {

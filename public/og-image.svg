@@ -1,46 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#FAFAF8" />
-  <rect x="0" y="0" width="1200" height="10" fill="#4F46E5" />
+  <rect width="1200" height="630" fill="#F5F5F0" />
+  <rect x="0" y="0" width="1200" height="10" fill="#107E72" />
 
-  <rect x="96" y="120" width="56" height="56" rx="14" fill="#4F46E5" />
+  <rect x="96" y="120" width="56" height="56" rx="8" fill="#132231" />
   <text
     x="124" y="157" text-anchor="middle" dominant-baseline="middle"
-    font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-weight="700"
-    font-size="24" fill="#FAFAF8" letter-spacing="-1"
-  >ME</text>
+    font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif" font-weight="700"
+    font-size="24" fill="#A8DFCF" letter-spacing="-1"
+  >M.</text>
 
   <text
     x="96" y="300"
-    font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
-    font-weight="700"
+    font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif"
+    font-weight="600"
     font-size="72"
-    fill="#16171B"
+    fill="#132231"
     letter-spacing="-2"
   >Matheus Emanoel</text>
 
   <text
     x="96" y="360"
-    font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
+    font-family="'DM Sans', 'Segoe UI', system-ui, sans-serif"
     font-weight="500"
     font-size="34"
-    fill="#4B4D57"
+    fill="#334754"
   >Desenvolvedor de Software</text>
 
   <text
     x="96" y="460"
-    font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
+    font-family="'DM Sans', 'Segoe UI', system-ui, sans-serif"
     font-weight="400"
     font-size="24"
-    fill="#6B6D76"
+    fill="#687880"
   >Projetos, experiência e trajetória — portfolio-professional</text>
 
-  <line x1="96" y1="500" x2="1104" y2="500" stroke="#E4E4E1" stroke-width="1" />
+  <line x1="96" y1="500" x2="1104" y2="500" stroke="#DCE2DF" stroke-width="1" />
 
   <text
     x="96" y="556"
-    font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
-    font-weight="600"
+    font-family="'IBM Plex Mono', 'Courier New', monospace"
+    font-weight="500"
     font-size="22"
-    fill="#4F46E5"
+    fill="#107E72"
   >matheus-emanoel-souza.github.io/portfolio-professional</text>
 </svg>

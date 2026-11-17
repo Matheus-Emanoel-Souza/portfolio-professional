@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion'
+import { ArchitectureDiagram } from '@/components/ArchitectureDiagram/ArchitectureDiagram'
 import { GithubIcon } from '@/components/icons/GithubIcon'
 import { LinkedInIcon } from '@/components/icons/LinkedInIcon'
 import { ResumeButton } from '@/components/ResumeButton/ResumeButton'
@@ -19,55 +20,66 @@ const fadeUp: Variants = {
 export function Hero() {
   return (
     <section className={[styles.hero, 'container'].join(' ')} aria-label="Apresentação">
-      <motion.p className={styles.greeting} initial="hidden" animate="visible" custom={0} variants={fadeUp}>
-        Olá, eu sou
-      </motion.p>
+      <div className={styles.copy}>
+        <motion.p className={['overline', styles.greeting].join(' ')} initial="hidden" animate="visible" custom={0} variants={fadeUp}>
+          Olá, eu sou
+        </motion.p>
 
-      <motion.h1 className={styles.name} initial="hidden" animate="visible" custom={0.08} variants={fadeUp}>
-        {profile.name}
-      </motion.h1>
+        <motion.h1 className={styles.name} initial="hidden" animate="visible" custom={0.08} variants={fadeUp}>
+          {profile.name}
+        </motion.h1>
 
-      <motion.p className={styles.role} initial="hidden" animate="visible" custom={0.16} variants={fadeUp}>
-        {profile.role}
-      </motion.p>
+        <motion.p className={styles.role} initial="hidden" animate="visible" custom={0.16} variants={fadeUp}>
+          {profile.role}
+        </motion.p>
 
-      <motion.p className={styles.tagline} initial="hidden" animate="visible" custom={0.24} variants={fadeUp}>
-        {profile.tagline}
-      </motion.p>
+        <motion.p className={styles.tagline} initial="hidden" animate="visible" custom={0.24} variants={fadeUp}>
+          {profile.tagline}
+        </motion.p>
 
-      <motion.div className={styles.actions} initial="hidden" animate="visible" custom={0.32} variants={fadeUp}>
-        <a
-          href="#projects"
-          className={styles.primaryCta}
-          onClick={(event) => {
-            event.preventDefault()
-            scrollToSection('projects')
-          }}
-        >
-          Ver projetos
-        </a>
-        <ResumeButton />
-      </motion.div>
-
-      <motion.div className={styles.social} initial="hidden" animate="visible" custom={0.4} variants={fadeUp}>
-        <a
-          href={profile.social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub (abre em nova aba)"
-        >
-          <GithubIcon />
-        </a>
-        {profile.social.linkedin && (
+        <motion.div className={styles.actions} initial="hidden" animate="visible" custom={0.32} variants={fadeUp}>
           <a
-            href={profile.social.linkedin}
+            href="#projects"
+            className={styles.primaryCta}
+            onClick={(event) => {
+              event.preventDefault()
+              scrollToSection('projects')
+            }}
+          >
+            Ver projetos
+          </a>
+          <ResumeButton />
+        </motion.div>
+
+        <motion.div className={styles.social} initial="hidden" animate="visible" custom={0.4} variants={fadeUp}>
+          <a
+            href={profile.social.github}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn (abre em nova aba)"
+            aria-label="GitHub (abre em nova aba)"
           >
-            <LinkedInIcon />
+            <GithubIcon />
           </a>
-        )}
+          {profile.social.linkedin && (
+            <a
+              href={profile.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn (abre em nova aba)"
+            >
+              <LinkedInIcon />
+            </a>
+          )}
+        </motion.div>
+      </div>
+
+      <motion.div
+        className={styles.art}
+        initial={{ opacity: 0, scale: 0.97 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      >
+        <ArchitectureDiagram />
       </motion.div>
     </section>
   )

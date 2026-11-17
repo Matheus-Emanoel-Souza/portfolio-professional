@@ -12,8 +12,9 @@ export function Education() {
       className={['section', 'container', styles.education].join(' ')}
       aria-labelledby="education-heading"
     >
+      <span className="overline">TRAJETÓRIA / 04</span>
       <h2 id="education-heading" className={styles.heading}>
-        Formação
+        Formação<span className="accentDot">.</span>
       </h2>
 
       <Timeline events={educationEvents} />

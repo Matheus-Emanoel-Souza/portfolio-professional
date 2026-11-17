@@ -11,8 +11,9 @@ export function Skills() {
       className={['section', 'container', styles.skills].join(' ')}
       aria-labelledby="skills-heading"
     >
+      <span className="overline">COMPETÊNCIAS / 06</span>
       <h2 id="skills-heading" className={styles.heading}>
-        Skills
+        Skills<span className="accentDot">.</span>
       </h2>
 
       <div className={styles.groups}>
@@ -24,14 +25,17 @@ export function Skills() {
             <div key={category} className={styles.group}>
               <h3 className={styles.groupTitle}>{SKILL_CATEGORY_LABELS[category]}</h3>
               <ul className={styles.skillList}>
-                {categorySkills.map((skill) => {
+                {categorySkills.map((skill, index) => {
                   const usage = getSkillUsage(skill.id)
                   return (
                     <li key={skill.id} className={styles.skill}>
-                      <span className={styles.skillName}>{skill.name}</span>
-                      {usage.length > 0 && (
-                        <span className={styles.usage}>Usado em: {usage.join(', ')}</span>
-                      )}
+                      <span className={styles.num}>{String(index + 1).padStart(2, '0')}</span>
+                      <div className={styles.skillBody}>
+                        <span className={styles.skillName}>{skill.name}</span>
+                        {usage.length > 0 && (
+                          <span className={styles.usage}>Usado em: {usage.join(', ')}</span>
+                        )}
+                      </div>
                     </li>
                   )
                 })}

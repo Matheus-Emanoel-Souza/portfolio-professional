@@ -7,6 +7,7 @@ import { Education } from '@/sections/Education/Education'
 import { Experience } from '@/sections/Experience/Experience'
 import { FeaturedProjects } from '@/sections/FeaturedProjects/FeaturedProjects'
 import { Hero } from '@/sections/Hero/Hero'
+import { Principles } from '@/sections/Principles/Principles'
 import { Skills } from '@/sections/Skills/Skills'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { scrollToSection } from '@/lib/scrollToSection'
@@ -37,6 +38,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Principles />
       <About />
       <FeaturedProjects />
       <Experience />
