@@ -12,6 +12,26 @@ import type { Project } from '@/types'
  */
 export const projects: Project[] = [
   {
+    id: 'jobtrail',
+    name: 'JobTrail',
+    status: 'in-progress',
+    featured: true,
+    description:
+      'Plataforma para organizar candidaturas, processos seletivos e evolução de habilidades durante uma busca por emprego — API + interface web em .NET.',
+    problem:
+      'Acompanhar vagas, candidaturas e etapas de processo seletivo em planilhas soltas não escala: falta histórico de status, lembretes de prazo e uma visão de quanto o perfil do candidato realmente atende cada vaga.',
+    solution:
+      'Clean Architecture em 4 projetos (Core/Infrastructure/Api/Web): Web API + Blazor Web App (MudBlazor) num esquema BFF, onde a Web guarda sua própria sessão e repassa a chamada autenticada pra Api — o navegador nunca fala direto com a Api. Banco SQL Server com nomenclatura padronizada TAB/REL, opções e dicionário de dados centralizados (TABOPC/TABDIC) em vez de tabelas de domínio fixas, separação entre vaga (anúncio) e candidatura (evento de inscrição) permitindo múltiplas candidaturas independentes à mesma vaga, e um algoritmo determinístico (sem IA generativa) de compatibilidade vaga × perfil.',
+    architecture:
+      'ASP.NET Core Identity customizado sobre a tabela de usuário do domínio (sem tabela de login duplicada), EF Core 10 mapeado "database-first" sobre o schema já existente, rotina diária em background (IHostedService) pra lembretes e expiração automática de candidaturas, testes de integração em xUnit contra uma instância real do SQL Server LocalDB (não InMemory) e testes de componente Blazor com bUnit.',
+    skillIds: ['csharp', 'dotnet', 'aspnet-core', 'blazor', 'ef-core', 'sql-server', 'databases', 'software-engineering', 'git', 'github'],
+    screenshots: ['/projects/jobtrail/telas.png', '/projects/jobtrail/wizards.png', '/projects/jobtrail/marca.png'],
+    links: {
+      github: 'https://github.com/Matheus-Emanoel-Souza/controle-candidaturas',
+    },
+    isPublicRepo: true,
+  },
+  {
     id: 'portfolio-adventure',
     name: 'Portfolio Adventure',
     status: 'completed',
